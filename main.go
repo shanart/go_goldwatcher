@@ -38,6 +38,8 @@ func main() {
 	myApp.MainWindow.SetFixedSize(true)
 	myApp.MainWindow.SetMaster() // this is the main window of the application
 
+	myApp.makeUI()
+
 	// show and run the application
 	myApp.MainWindow.ShowAndRun()
 }
