@@ -21,23 +21,24 @@ func TestMain(m *testing.M) {
 
 var jsonToReturn = `
 {
-	"ts": 1674305796135,
-	"tsj": 1674305795317,
-	"date": "Jan 21st 2023, 07:56:35 am NY",
+	"ts": 1654782060772,
+	"tsj": 1654782056216,
+	"date": "Jun 9th 2022, 09:40:56 am NY",
 	"items": [
-		{
+	  {
 		"curr": "USD",
-		"xauPrice": 1926,
-		"xagPrice": 23.934,
-		"chgXau": -5.935,
-		"chgXag": 0.0625,
-		"pcXau": -0.3072,
-		"pcXag": 0.2618,
-		"xauClose": 1932.015,
-		"xagClose": 23.8715
-		}
+		"xauPrice": 1849,
+		"xagPrice": 21.9115,
+		"chgXau": -3.735,
+		"chgXag": -0.1425,
+		"pcXau": -0.2016,
+		"pcXag": -0.6461,
+		"xauClose": 1852.735,
+		"xagClose": 22.054
+	  }
 	]
-}`
+  }
+`
 
 type RoundTripFunc func(req *http.Request) *http.Response
 

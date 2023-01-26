@@ -24,9 +24,10 @@ type Price struct {
 	Time          time.Time `json:"-"`
 }
 
+
 func (g *Gold) GetPrices() (*Price, error) {
 	if g.Client == nil {
-		log.Println("Setting to live client in GetPrices")
+		log.Println("setting to live client in GetPrices")
 		g.Client = &http.Client{}
 	}
 
@@ -57,12 +58,12 @@ func (g *Gold) GetPrices() (*Price, error) {
 
 	previous, current, change = gold.Prices[0].PreviousClose, gold.Prices[0].Price, gold.Prices[0].Change
 
-	var currentInfo = Price{
-		Currency:      currency,
-		Price:         current,
-		Change:        change,
+	var currentInfo = Price {
+		Currency: currency,
+		Price: current,
+		Change: change,
 		PreviousClose: previous,
-		Time:          time.Now(),
+		Time: time.Now(),
 	}
 
 	return &currentInfo, nil

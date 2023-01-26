@@ -15,7 +15,7 @@ func TestGold_GetPrices(t *testing.T) {
 		t.Error(err)
 	}
 
-	if p.Price != 1926 {
-		t.Error("Wrong price returned", p.Price)
+	if p.Price != 1849 {
+		t.Error("wrong price returned:", p.Price)
 	}
 }
